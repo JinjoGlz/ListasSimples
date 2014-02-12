@@ -6,7 +6,8 @@
 package listassimplementeligadas;
 
 /**
- *
+ * Esta clase implementa una lista simplemente ligada, usando para ello la clase
+ * Nodo
  * @author leon
  */
 public class Lista<T> {
