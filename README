@@ -4,8 +4,8 @@ Se utiliza una librería de Java para el manejo de menus en la terminal:
 
 Java Lanterna - https://code.google.com/p/lanterna/
 
-Para poder utilizarla dentro de netbeans es necesario definir la librería o agrgar el jar a
-las librerías dl proyecto.
+Para poder utilizarla dentro de netbeans es necesario definir la librería o agergar 
+el jar a las librerías del proyecto.
 
 El JavaDoc del proyecto está en:
 
