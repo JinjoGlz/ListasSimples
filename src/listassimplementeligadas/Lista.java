@@ -135,7 +135,27 @@ public class Lista<T> {
              throw new LinkedListException("El nodo dado como referencia no está en la lista");
          }
     }
+      
+      public void borrarPrimerElemento(){
+          if (inicio != null){
+              inicio = inicio.getLiga();
+          }
+      }
     
+      public void borrarUltimoElemento(){
+          Nodo<T> aux = inicio;
+          Nodo<T> anterior = null;
+          if (inicio.getLiga() == null){
+              inicio = null;
+          }else {
+              while (aux.getLiga() != null){
+                  anterior = aux;
+                  aux = aux.getLiga();
+              }
+              anterior.setLiga(null);
+          }
+      }
+      
     public void clear(){
             inicio = null;
         }   
