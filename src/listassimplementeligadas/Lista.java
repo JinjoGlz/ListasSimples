@@ -6,7 +6,6 @@
 
 package listassimplementeligadas;
 
-import java.util.Scanner;
 
 /**
  *
@@ -81,10 +80,64 @@ public class Lista<T> {
             aux.setLiga(nuevo);
             
         }
-        
-        
+    }
+     
+      public void insertaAntesDato(T dato, T datoInicial) throws LinkedListException{
+         if (inicio == null){
+             throw new LinkedListException("La lista está vacía.");
+         } 
+         Nodo<T> actual = inicio;
+         Nodo<T> anterior = null;
+         boolean band = false;
+         while(!actual.getInfo().equals(datoInicial) && !band){
+             if (actual.getLiga() != null){
+                 anterior = actual;
+                 actual = actual.getLiga();
+             }else{
+                 band = true;
+             }
+                 
+         }
+         if (!band){
+             Nodo<T> nodo = new Nodo<>(dato);
+             if (actual == inicio){ // El nodo dado como referencia es el primero
+                 nodo.setLiga(inicio);
+                 inicio = nodo;
+             }else {
+                 anterior.setLiga(nodo);
+                 nodo.setLiga(actual);
+             }
+             
+         }else{
+             throw new LinkedListException("El nodo dado como referencia no está en la lista");
+         }
+    }
+      
+      public void insertaDespuesDato(T dato, T datoInicial) throws LinkedListException{
+         if (inicio == null){
+             throw new LinkedListException("La lista está vacía.");
+         } 
+         Nodo<T> actual = inicio;
+         boolean band = false;
+         while(!actual.getInfo().equals(datoInicial) && !band){
+             if (actual.getLiga() != null){
+                 actual = actual.getLiga();
+             }else{
+                 band = true;
+             }
+                 
+         }
+         if (!band){
+             Nodo<T> nodo = new Nodo<>(dato);
+             nodo.setLiga(actual.getLiga());
+             actual.setLiga(nodo);
+         }else{
+             throw new LinkedListException("El nodo dado como referencia no está en la lista");
+         }
     }
     
-   
+    public void clear(){
+            inicio = null;
+        }   
     
 }
