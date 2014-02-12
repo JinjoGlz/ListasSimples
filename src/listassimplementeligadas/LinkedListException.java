@@ -7,7 +7,7 @@
 package listassimplementeligadas;
 
 /**
- *
+ * Excepción que hereda de Exception para mandar errores en el demo
  * @author leon
  */
 public class LinkedListException extends Exception {

@@ -22,12 +22,14 @@ import com.googlecode.lanterna.gui.layout.LinearLayout;
 import com.googlecode.lanterna.terminal.TerminalSize;
 
 /**
- *
+ * Clase que permite mostrar un menu con las opciones para ejemplificar las listas
+ * simplemente ligadas
  * @author leon
  */
 public class ListasSimplementeLigadas {
 
     /**
+     * Método estático Mail
      * @param args the command line arguments
      */
     public static void main(String[] args) throws InterruptedException {
@@ -108,6 +110,11 @@ public class ListasSimplementeLigadas {
 
     }
 
+    /**
+     * Muestra una cadena en pantalla
+     * @param lugar El mensaje a mostrar
+     * @return 
+     */
     private static String muestraLugar(Integer lugar) {
         String resultado = null;
         switch (lugar) {
@@ -134,10 +141,9 @@ public class ListasSimplementeLigadas {
     }
 
     /**
-     * Este metodo pregunta al usuario
-     *
-     * @param lista
-     * @param guiScreen
+     * Este metodo es el genérico para insertar elementos a la lista.
+     * @param lista Una clase que implemente una lista ligada
+     * @param guiScreen Liberías de uso de pantalla
      * @param lugar 1 Inicio, 2 Final, 3 Antes de 4 Despues de
      */
     public static void insertaNodoEnLista(final Lista<Integer> lista, final GUIScreen guiScreen, final Integer lugar) {
