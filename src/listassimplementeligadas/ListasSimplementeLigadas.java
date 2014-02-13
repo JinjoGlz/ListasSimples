@@ -83,6 +83,13 @@ public class ListasSimplementeLigadas {
                 insertaNodoEnLista(lista, guiScreen, 6);
             }
         }));
+        window1.addComponent(new Button("Contar", new Action() {
+            @Override
+            public void doAction() {
+                ListasUtils<Integer>listasutil= new ListasUtils<Integer>();
+                System.out.println(listasutil.count(lista.getInicio()));
+            }
+        }));
         window1.addComponent(new Button("Limpiar lista", new Action() {
             @Override
             public void doAction() {
